@@ -91,15 +91,84 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Main Content Area */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold text-amber-900 mb-4">
-            Welcome to Xonix Coffee
-          </h2>
-          <p className="text-lg text-amber-800">
-            Your home page content goes here
-          </p>
+      {/* Hero Section */}
+      <main className="relative min-h-screen flex items-center bg-linear-to-br from-amber-50/50 via-white to-orange-50/30 py-20">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Side - Image */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-linear-to-br from-amber-400/20 to-orange-400/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
+              <Image
+                src="/home-coffee.jpg"
+                alt="Morning Coffee"
+                width={600}
+                height={450}
+                className="relative rounded-3xl shadow-2xl object-cover w-full h-[450px] ring-1 ring-amber-900/10 transform group-hover:scale-[1.02] transition-transform duration-500"
+                priority
+              />
+            </div>
+
+            {/* Right Side - Content */}
+            <div className="space-y-10 lg:pl-8">
+              <div className="space-y-6">
+                <h1 
+                  className="text-5xl sm:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-linear-to-r from-amber-900 via-amber-800 to-orange-900 leading-[1.15] tracking-tight"
+                  style={{ fontFamily: 'Playfair Display, serif' }}
+                >
+                  Enjoy Your Morning Coffee
+                </h1>
+                
+                <p 
+                  className="text-xl sm:text-2xl text-amber-900/70 leading-relaxed font-light max-w-xl"
+                  style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic' }}
+                >
+                  Boost your productivity and build your mood with a glass of coffee in the morning, 100% natural from the garden
+                </p>
+              </div>
+
+              {/* Order Now Button */}
+              <button className="group relative inline-flex items-center gap-4 bg-linear-to-r from-amber-800 to-amber-900 hover:from-amber-900 hover:to-orange-900 text-white px-10 py-5 rounded-2xl font-semibold text-xl transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 overflow-hidden">
+                <span className="relative z-10">Order Now</span>
+                <div className="relative z-10 flex items-center justify-center w-8 h-8 bg-white rounded-full transition-transform group-hover:translate-x-1 duration-300">
+                  <svg 
+                    className="w-5 h-5 text-amber-800" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+                <div className="absolute inset-0 bg-linear-to-r from-white/0 via-white/10 to-white/0 transform -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+              </button>
+            </div>
+          </div>
+
+          {/* Feature Section - Redesigned */}
+          <div className="mt-28 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Side - Simple Description */}
+            <div className="flex items-center">
+              <p 
+                className="text-xl sm:text-2xl text-amber-900/70 leading-relaxed font-light"
+                style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic' }}
+              >
+                Elevate your energy and enhance your day with our premium coffee selection, carefully sourced and roasted to perfection. Experience the pure essence of quality beans, grown naturally in the finest gardens around the world.
+              </p>
+            </div>
+
+            {/* Right Side - Coffee Splash Image */}
+            <div className="relative group order-first lg:order-last">
+              <div className="absolute inset-0 bg-linear-to-br from-amber-400/20 to-orange-400/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
+              <Image
+                src="/coffee-splash.jpg"
+                alt="Coffee Splash"
+                width={600}
+                height={450}
+                className="relative rounded-3xl shadow-2xl object-cover w-full h-[450px] ring-1 ring-amber-900/10 transform group-hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
+          </div>
         </div>
       </main>
     </div>
