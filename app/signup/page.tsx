@@ -52,19 +52,19 @@ export default function SignUpPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-amber-50 via-orange-50 to-yellow-50 p-4">
       <div className="w-full max-w-6xl">
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div className="bg-amber-50 rounded-3xl shadow-2xl overflow-hidden border border-amber-200">
           <div className="grid md:grid-cols-2 gap-0">
             {/* Left side - Form */}
             <div className="p-8 md:p-12 lg:p-16">
               <div className="max-w-md mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                  <h2 className="text-4xl font-bold text-indigo-600 mb-2 text-center">
+                  <h2 className="text-4xl font-bold text-amber-700 mb-2 text-center">
                     Create Account
                   </h2>
-                  <p className="text-gray-600 text-lg text-center ">
+                  <p className="text-gray-600 text-lg text-center">
                     Join us today and get started
                   </p>
                 </div>
@@ -97,7 +97,7 @@ export default function SignUpPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400 bg-white"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -113,7 +113,7 @@ export default function SignUpPage() {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400 bg-white"
                       placeholder="••••••••"
                     />
                   </div>
@@ -129,7 +129,7 @@ export default function SignUpPage() {
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400 bg-white"
                       placeholder="••••••••"
                     />
                   </div>
@@ -138,7 +138,7 @@ export default function SignUpPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-linear-to-r from-indigo-600 to-purple-600 text-white py-3.5 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-amber-700 text-white py-3.5 rounded-xl font-semibold hover:bg-amber-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {loading ? (
                       <span className="flex items-center justify-center">
@@ -160,9 +160,9 @@ export default function SignUpPage() {
                     Already have an account?{' '}
                     <Link 
                       href="/login" 
-                      className="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors"
+                      className="text-amber-700 font-semibold hover:text-amber-800 transition-colors"
                     >
-                      Log in
+                      Log In
                     </Link>
                   </p>
                 </div>

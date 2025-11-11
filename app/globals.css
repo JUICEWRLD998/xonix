@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fade-in 1s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-delay {
+  opacity: 0;
+  animation: fade-in 1s ease-out 0.5s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fade-in 1s ease-out 0.8s forwards;
+}

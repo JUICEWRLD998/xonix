@@ -39,16 +39,16 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-amber-50 via-orange-50 to-yellow-50 p-4">
       <div className="w-full max-w-6xl">
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div className="bg-amber-50 rounded-3xl shadow-2xl overflow-hidden border border-amber-200">
           <div className="grid md:grid-cols-2 gap-0">
             {/* Left side - Form */}
             <div className="p-8 md:p-12 lg:p-16">
               <div className="max-w-md mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                  <h1 className="text-4xl font-bold  text-indigo-700 mb-2 text-center ">
+                  <h1 className="text-4xl font-bold  text-amber-700 mb-2 text-center ">
                     Welcome Back
                   </h1>
                   <p className="text-gray-700 text-lg text-center">
@@ -84,31 +84,23 @@ export default function LoginPage() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400 bg-white"
                       placeholder="your@email.com"
                     />
                   </div>
 
                   {/* Password Input */}
                   <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <label htmlFor="password" className="block text-sm font-semibold text-gray-700">
-                        Password
-                      </label>
-                      <Link 
-                        href="/forgot-password" 
-                        className="text-sm text-indigo-600 hover:text-indigo-700 font-medium transition-colors"
-                      >
-                        Forgot?
-                      </Link>
-                    </div>
+                    <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Password
+                    </label>
                     <input
                       id="password"
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-transparent outline-none transition duration-200 text-gray-900 placeholder-gray-400 bg-white"
                       placeholder="••••••••"
                     />
                   </div>
@@ -119,7 +111,7 @@ export default function LoginPage() {
                       id="remember-me"
                       name="remember-me"
                       type="checkbox"
-                      className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded cursor-pointer"
+                      className="h-4 w-4 text-amber-700 focus:ring-amber-500 border-amber-300 rounded cursor-pointer"
                     />
                     <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-700 cursor-pointer">
                       Remember me 
@@ -130,7 +122,7 @@ export default function LoginPage() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-linear-to-r from-indigo-600 to-purple-600 text-white py-3.5 rounded-xl font-semibold hover:from-indigo-700 hover:to-purple-700 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full bg-amber-700 text-white py-3.5 rounded-xl font-semibold hover:bg-amber-800 transform hover:scale-[1.02] transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {loading ? (
                       <span className="flex items-center justify-center">
@@ -152,7 +144,7 @@ export default function LoginPage() {
                     Don't have an account?{' '}
                     <Link 
                       href="/signup" 
-                      className="text-indigo-600 font-semibold hover:text-indigo-700 transition-colors"
+                      className="text-amber-700 font-semibold hover:text-amber-800 transition-colors"
                     >
                       Sign up
                     </Link>
