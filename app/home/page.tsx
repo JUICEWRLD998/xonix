@@ -2,26 +2,27 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
 export default function HomePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
   return (
     <div className="min-h-screen bg-linear-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-md border-b border-amber-200">
+      <nav className="bg-linear-to-r from-amber-50/80 via-white to-amber-50/80 backdrop-blur-sm shadow-sm border-b border-amber-200/50 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Brand Name - Left */}
             <div className="shrink-0 flex items-center gap-3">
-
               <div className="flex flex-col leading-tight">
                 <h1 className="text-3xl font-semibold text-amber-900" style={{ fontFamily: 'Outfit, sans-serif' }}>
                   Xonix🍵
                 </h1>
-                
               </div>
             </div>
 
-            {/* Navigation Links - Center */}
+            {/* Navigation Links - Right (Desktop) */}
             <div className="hidden md:flex items-center space-x-10" style={{ fontFamily: 'Outfit, sans-serif' }}>
               <Link 
                 href="/home" 
@@ -43,51 +44,50 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Cart Icon - Right */}
-            <div className="flex items-center">
-              <button className="relative p-3 text-amber-900 hover:text-amber-700 hover:bg-amber-50 rounded-full transition-all duration-300 group">
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-6 w-6 transition-transform group-hover:scale-110 duration-300" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" 
-                  />
+            {/* Hamburger Menu Button - Mobile */}
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 rounded-lg text-amber-900 hover:bg-amber-50 transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              {!mobileMenuOpen ? (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <span className="absolute -top-0.5 -right-0.5 bg-linear-to-br from-amber-600 to-amber-800 text-white text-xs font-semibold rounded-full h-5 w-5 flex items-center justify-center shadow-md border-2 border-white">
-                  0
-                </span>
-              </button>
-            </div>
+              ) : (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              )}
+            </button>
           </div>
 
-          {/* Mobile Menu */}
-          <div className="md:hidden pb-4 space-y-2">
-            <Link 
-              href="/home" 
-              className="block text-amber-900 font-semibold border-b-2 border-amber-700 pb-1 w-fit"
-            >
-              Home
-            </Link>
-            <Link 
-              href="/products" 
-              className="block text-amber-800 font-medium hover:text-amber-900 transition-colors"
-            >
-              Products
-            </Link>
-            <Link 
-              href="/review" 
-              className="block text-amber-800 font-medium hover:text-amber-900 transition-colors"
-            >
-              Review
-            </Link>
-          </div>
+          {/* Mobile Menu Dropdown */}
+          {mobileMenuOpen && (
+            <div className="md:hidden pb-4 pt-2 space-y-2 border-t border-amber-200/50 mt-2 animate-fade-in" style={{ fontFamily: 'Outfit, sans-serif' }}>
+              <Link 
+                href="/home" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-amber-900 font-semibold py-2 px-3 rounded-lg hover:bg-amber-50 transition-colors duration-200"
+              >
+                Home
+              </Link>
+              <Link 
+                href="/products"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-amber-800 font-medium py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-900 transition-colors duration-200"
+              >
+                Products
+              </Link>
+              <Link 
+                href="/review"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-amber-800 font-medium py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-900 transition-colors duration-200"
+              >
+                Review
+              </Link>
+            </div>
+          )}
         </div>
       </nav>
 
