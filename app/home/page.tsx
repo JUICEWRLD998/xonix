@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { ReactTyped } from "react-typed";
 import React from "react";
 
 export default function HomePage() {
@@ -115,7 +116,12 @@ export default function HomePage() {
                   className="text-5xl sm:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-linear-to-r from-amber-900 via-amber-800 to-orange-900 leading-[1.15] tracking-tight"
                   style={{ fontFamily: 'Playfair Display, serif' }}
                 >
-                  Enjoy Your Morning Coffee
+                              <ReactTyped
+                                strings={['Enjoy your Morning Coffee']}
+                                typeSpeed={50}
+                                backSpeed={40}
+                                loop={false}
+                              />
                 </h1>
                 
                 <p 
