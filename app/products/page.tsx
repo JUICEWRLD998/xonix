@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 export default function ProductsPage() {
@@ -391,43 +392,61 @@ export default function ProductsPage() {
             <div className="space-y-6">
               {/* Review 1 */}
               <div className="bg-white border border-amber-200/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <div className="flex text-amber-600 mb-2">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                        </svg>
-                      ))}
+                <div className="flex items-start gap-4">
+                  <Image
+                    src="/review-img1.jpg"
+                    alt="Sarah"
+                    width={56}
+                    height={56}
+                    className="rounded-full object-cover w-14 h-14 ring-2 ring-amber-200"
+                  />
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <p className="font-semibold text-amber-900" style={{ fontFamily: 'Outfit, sans-serif' }}>Sarah</p>
+                      <div className="flex text-amber-500">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                          </svg>
+                        ))}
+                      </div>
                     </div>
-                    <p className="font-semibold text-amber-900" style={{ fontFamily: 'Outfit, sans-serif' }}>Sarah</p>
+                    <p className="text-amber-800/80 text-sm leading-relaxed" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                      "My morning favorite! The flavor profile is absolutely incredible. Can't start my day without it."
+                    </p>
                   </div>
                 </div>
-                <p className="text-amber-800/80" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  "My morning favorite! The flavor profile is absolutely incredible. Can't start my day without it."
-                </p>
               </div>
 
               {/* Review 2 */}
               <div className="bg-white border border-amber-200/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <div className="flex text-amber-600 mb-2">
-                      {[...Array(4)].map((_, i) => (
-                        <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                <div className="flex items-start gap-4">
+                  <Image
+                    src="/review-img2.jpg"
+                    alt="Tunde"
+                    width={56}
+                    height={56}
+                    className="rounded-full object-cover w-14 h-14 ring-2 ring-amber-200"
+                  />
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <p className="font-semibold text-amber-900" style={{ fontFamily: 'Outfit, sans-serif' }}>Tunde</p>
+                      <div className="flex text-amber-500">
+                        {[...Array(4)].map((_, i) => (
+                          <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
+                          </svg>
+                        ))}
+                        <svg className="w-4 h-4 fill-current text-gray-300" viewBox="0 0 20 20">
                           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
                         </svg>
-                      ))}
-                      <svg className="w-4 h-4 fill-current text-gray-300" viewBox="0 0 20 20">
-                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                      </svg>
+                      </div>
                     </div>
-                    <p className="font-semibold text-amber-900" style={{ fontFamily: 'Outfit, sans-serif' }}>Tunde</p>
+                    <p className="text-amber-800/80 text-sm leading-relaxed" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                      "Great flavor but strong. Perfect if you like bold coffee. I'd recommend it for anyone who enjoys rich, intense flavors."
+                    </p>
                   </div>
                 </div>
-                <p className="text-amber-800/80" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  "Great flavor but strong. Perfect if you like bold coffee. I'd recommend it for anyone who enjoys rich, intense flavors."
-                </p>
               </div>
             </div>
           </div>
