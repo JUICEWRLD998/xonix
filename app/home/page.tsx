@@ -118,7 +118,7 @@ export default function HomePage() {
                 >
                               <ReactTyped
                                 strings={['Enjoy your Morning Coffee']}
-                                typeSpeed={50}
+                                typeSpeed={40}
                                 backSpeed={40}
                                 loop={false}
                               />
