@@ -1,1 +1,1 @@
-Theres nothing to read yet, lmao
+This is just a simple coffee shop website UI, and nothing much, lol.

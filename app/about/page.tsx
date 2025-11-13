@@ -187,7 +187,7 @@ export default function AboutPage() {
                 <div className="relative w-48 h-48 mx-auto mb-4">
                   <Image
                     src="/review-img2.jpg"
-                    alt="Daniel"
+                    alt="Tanjiro"
                     fill
                     className="object-cover rounded-full ring-4 ring-amber-200"
                   />
@@ -211,7 +211,7 @@ export default function AboutPage() {
                 <div className="relative w-48 h-48 mx-auto mb-4">
                   <Image
                     src="/manager-img.jpeg"
-                    alt="Laila"
+                    alt="Muzan"
                     fill
                     className="object-cover rounded-full ring-4 ring-amber-200"
                   />

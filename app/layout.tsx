@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Xonix - Authentication",
+  title: "Xonix",
   description: "Login and sign up for Xonix",
 };
 
