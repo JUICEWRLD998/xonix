@@ -37,10 +37,10 @@ export default function ProductsPage() {
                 Products
               </Link>
               <Link 
-                href="/review" 
+                href="/about" 
                 className="relative text-amber-800 font-medium text-base tracking-wide hover:text-amber-900 transition-all duration-300 pb-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2.5px] after:bg-linear-to-r after:from-amber-700 after:to-amber-600 after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
               >
-                Review
+                About
               </Link>
             </div>
 
@@ -80,11 +80,11 @@ export default function ProductsPage() {
                 Products
               </Link>
               <Link 
-                href="/review"
+                href="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-amber-800 font-medium py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-900 transition-colors duration-200"
               >
-                Review
+                About
               </Link>
             </div>
           )}
@@ -208,7 +208,7 @@ export default function ProductsPage() {
                 {/* Title & Description */}
                 <div className="space-y-3">
                   <h1 
-                    className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight"
+                    className="text-3xl lg:text-4xl font-bold text-amber-900 leading-tight"
                     style={{ fontFamily: 'Playfair Display, serif' }}
                   >
                     Colombian Roast
@@ -217,7 +217,7 @@ export default function ProductsPage() {
                     className="text-base text-gray-600 leading-relaxed"
                     style={{ fontFamily: 'Inter, sans-serif' }}
                   >
-                    Flavor notes: caramel, nuts, dark chocolate
+                   <span className="font-semibold">Flavor notes:</span> caramel, nuts, dark chocolate
                   </p>
                   <p 
                     className="text-sm text-gray-500"
@@ -305,7 +305,7 @@ export default function ProductsPage() {
                 {/* Title & Description */}
                 <div className="space-y-3">
                   <h1 
-                    className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight"
+                    className="text-3xl lg:text-4xl font-bold text-amber-900 leading-tight"
                     style={{ fontFamily: 'Playfair Display, serif' }}
                   >
                     Espresso Blend
@@ -314,7 +314,7 @@ export default function ProductsPage() {
                     className="text-base text-gray-600 leading-relaxed"
                     style={{ fontFamily: 'Inter, sans-serif' }}
                   >
-                    Flavor notes: bold, smoky, rich cream
+                    <span className="font-semibold">Flavor notes:</span> bold, smoky, rich cream
                   </p>
                   <p 
                     className="text-sm text-gray-500"

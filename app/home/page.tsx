@@ -38,10 +38,10 @@ export default function HomePage() {
                 Products
               </Link>
               <Link 
-                href="/review" 
+                href="/about" 
                 className="relative text-amber-800 font-medium text-base tracking-wide hover:text-amber-900 transition-all duration-300 pb-1.5 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2.5px] after:bg-linear-to-r after:from-amber-700 after:to-amber-600 after:rounded-full after:transition-all after:duration-300 hover:after:w-full"
               >
-                Review
+                About
               </Link>
             </div>
 
@@ -81,11 +81,11 @@ export default function HomePage() {
                 Products
               </Link>
               <Link 
-                href="/review"
+                href="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block text-amber-800 font-medium py-2 px-3 rounded-lg hover:bg-amber-50 hover:text-amber-900 transition-colors duration-200"
               >
-                Review
+                About
               </Link>
             </div>
           )}
